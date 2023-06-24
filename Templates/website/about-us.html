@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Page Title -->
+<section id="page-title">
+    <div class="title">
+        <h1 class="reset-margin">About us</h1>
+    </div>
+    <img src="{% static 'assets/img/title-background.jpg' %}" class="parallax-bg" alt="">
+</section>
+<!-- end Page Title -->
+
+<!-- Breadcrumb -->
+<section id="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Portfolio</li>
+        </ol>
+    </div>
+</section>
+<!-- end Breadcrumb -->
+
+<!-- The Mission -->
+<section id="the-mission" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="font-color-dark">The Mission</h2>
+                        </div><!-- /.section-title -->
+                        <p class="cite opacity-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et purus velit.
+                            Phasellus malesuada a nunc ut porttitor.
+                        </p>
+                    </div><!-- /.center -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end The Mission -->
+
+<div class="container"><hr></div>
+
+<!-- The Team -->
+<section id="nav-the-team" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="has-subtitle font-color-dark">The Team</h2>
+                            <h3 class="has-opacity font-color-dark">Who actually we are?</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="row">
+                        <div class="team">
+                            <div class="col-md-3">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-01.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-dark">Peter Smith</h4>
+                                        <h5 class="has-opacity font-color-dark">Lead designer & founder</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.1s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-02.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-dark">Nicole stars</h4>
+                                        <h5 class="has-opacity font-color-dark">Head of marketing</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.2s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-03.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-dark">Sam S.J. Jason</h4>
+                                        <h5 class="has-opacity font-color-dark">Developing guru leader</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.3s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-04.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-dark">Jane Brown</h4>
+                                        <h5 class="has-opacity font-color-dark">PR manager</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                        </div><!-- /.team -->
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end The Team -->
+
+<!-- About us -->
+<section id="nav-about-us" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="features">
+                            <div class="col-md-4">
+                                <div class="feature" data-scroll-reveal="enter left and move 50px">
+                                    <figure><img src="{% static 'assets/img/bulb.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Fresh & Bright Ideas</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-4">
+                                <div class="feature" data-scroll-reveal="enter bottom and move 50px">
+                                    <figure><img src="{% static 'assets/img/genius.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Innovative thinking</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-4">
+                                <div class="feature" data-scroll-reveal="enter right and move 50px">
+                                    <figure><img src="{% static 'assets/img/camera.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Attention to details</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                        </div><!-- /.features -->
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end About us -->
+
+
+{% endblock %}

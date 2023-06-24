@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="nav-home"></section>
+
+<!-- Page Title -->
+<section id="page-title">
+    <div class="title">
+        <h1 class="reset-margin">Contact us</h1>
+    </div>
+    <img src="{% static 'assets/img/title-background.jpg' %}" class="parallax-bg">
+</section>
+<!-- end Page Title -->
+
+<!-- Breadcrumb -->
+<section id="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Contact Us</li>
+        </ol>
+    </div>
+</section>
+<!-- end Breadcrumb -->
+
+<div id="map"></div><!-- /#map -->
+
+<!-- Contact Us Form -->
+<section id="contact-us-form" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2 class="regular-case">Address</h2>
+                            <div class="address" data-scroll-reveal="enter left and move 50px">
+                                <address>
+                                    <dl>
+                                        <dt><i class="icon icon_pin"></i></dt>
+                                        <dd><strong>YOUR COMPANY</strong>
+                                            <p>4815 Kinney Street<br>
+                                                Springfield, MA 01103</p>
+                                        </dd>
+                                        <dt><i class="icon icon_mobile"></i></dt>
+                                        <dd>413-474-5551</dd>
+                                        <dt><i class="icon icon_mail"></i></dt>
+                                        <dd><a href="#">hello@yourcompany.com</a></dd>
+                                        <dt><i class="icon social_skype"></i></dt>
+                                        <dd>your.company</dd>
+                                    </dl>
+                                </address>
+                            </div><!-- /.address -->
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="regular-case">Contact Form</h2>
+                            <div class="contact-form" data-scroll-reveal="enter right and move 50px">
+                                <form class="footer-form" id="contactform" method="post" action="#">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <input type="text" name="name" id="name" placeholder="Name" required>
+                                                </div><!-- /.controls -->
+                                            </div><!-- /.control-group -->
+                                        </div><!-- /.col-md-4 -->
+                                        <div class="col-md-6">
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                                                </div><!-- /.controls -->
+                                            </div><!-- /.control-group -->
+                                        </div><!-- /.col-md-4 -->
+                                    </div><!-- /.row -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                                </div><!-- /.controls -->
+                                            </div><!-- /.control-group -->
+                                        </div><!-- /.col-md-4 -->
+                                    </div><!-- /.row -->
+                                    <div class="form-actions pull-right">
+                                        <input type="submit" class="btn btn-color-primary" id="submit" value="Send a Message">
+                                    </div><!-- /.form-actions -->
+                                    <span class="pull-left form-description">Worried about a SPAM? We are first to hate it!</span>
+                                    <div id="form-status"></div>
+                                </form><!-- /.footer-form -->
+                            </div>
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- /Contact Us Form -->
+
+{% endblock %}

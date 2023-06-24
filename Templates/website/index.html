@@ -1,19 +1,610 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 {% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="{% static 'test.css' %}"> 
-    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon">
-    
-</head>
-<body>
-    <h1>this is home page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam vitae pariatur itaque perferendis dicta neque repellat odit modi sit voluptates voluptatum fugit, adipisci, expedita at officiis eum distinctio aliquam iusto?</p>
-    <p>این پیج برای سجاده که ویدیو های آموزشیشو به نمایش بزاره و پولشو بگیره</p>
-    
-</body>
-</html>
+{% block content %}
+
+<!-- Slider -->
+<section id="slider">
+    <div class="flexslider">
+        <ul class="slides">
+            <li class="has-parallax">
+                <div class="slide-content">
+                    <div class="slide-wrapper flipInX animated">
+                        <h1 class="reset-margin">We Create Awesomeness</h1>
+                    </div>
+                </div>
+                <img src="{% static 'assets/img/slide-1.jpg' %}" class="parallax-bg" alt="">
+            </li>
+            <li class="has-parallax">
+                <div class="slide-content">
+                    <div class="slide-wrapper flipInX animated">
+                        <h1 class="reset-margin">And Also Clients Happy</h1>
+                    </div>
+                    <img src="{% static 'assets/img/slide-1-element.png' %}" class="center-image opacity-30" alt="">
+                </div>
+                <img src="{% static 'assets/img/slide-2.jpg' %}" class="parallax-bg" alt="">
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- end Slider -->
+
+<!-- About us -->
+<section id="nav-about-us" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="has-subtitle font-color-dark">About us</h2>
+                            <h3 class="has-opacity font-color-dark">Why we are awesome</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="row">
+                        <div class="features">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="feature" data-scroll-reveal="enter left and move 50px">
+                                    <figure><img src="{% static 'assets/img/bulb.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Fresh & Bright Ideas</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="feature" data-scroll-reveal="enter bottom and move 50px">
+                                    <figure><img src="{% static 'assets/img/genius.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Innovative thinking</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="feature" data-scroll-reveal="enter right and move 50px">
+                                    <figure><img src="{% static 'assets/img/camera.png' %}" alt=""></figure>
+                                    <div class="feature-content">
+                                        <h4>Attention to details</h4>
+                                        <p>Ut sit amet enim eget odio imperdiet ornare dignissim vel massa. In elementum, magna</p>
+                                    </div><!-- /.feature-content -->
+                                </div><!-- /.feature -->
+                            </div><!-- /.col-md-4 -->
+                        </div><!-- /.features -->
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end About us -->
+
+<!-- The Mission -->
+<section id="the-mission" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="font-color-dark">The Mission</h2>
+                        </div><!-- /.section-title -->
+                        <p class="cite opacity-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et purus velit.
+                            Phasellus malesuada a nunc ut porttitor.
+                        </p>
+                    </div><!-- /.center -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="background">
+        <div class="has-parallax opacity-5">
+            <img src="{% static 'assets/img/bg-town.jpg' %}" class="parallax-bg" alt="">
+        </div>
+    </div>
+</section>
+<!-- end The Mission -->
+
+<!-- Our Works -->
+<section id="nav-our-works" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title" data-scroll-reveal="enter top and move 50px">
+                            <h2 class="font-color-light has-subtitle">Our Works</h2>
+                            <h3 class="has-opacity font-color-light">AKA what we have done so far</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="portfolio-filter center">
+                        <ul class="list-unstyled" id="filter">
+                            <li>
+                                <a href="#" class="btn btn-framed btn-color-grey-light current" data-filter="*">Show All</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-framed btn-color-grey-light" data-filter=".web-design">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-framed btn-color-grey-light" data-filter=".photography">Photography</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-framed btn-color-grey-light" data-filter=".identity">Identity</a>
+                            </li>
+                        </ul>
+                    </div><!-- /.portfolio-filter -->
+                    <div class="works">
+                        <div class="row">
+                            <ul class="portfolio-wrap list-unstyled">
+                                <li class="col-md-4 col-sm-4 web-design">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-01%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-01.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                                <li class="col-md-4 col-sm-4 photography">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-02%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-02.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                                <li class="col-md-4 col-sm-4 identity">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-03%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-03.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                                <li class="col-md-4 col-sm-4 photography">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-04%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-04.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                                <li class="col-md-4 col-sm-4 web-design">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-05%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-05.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                                <li class="col-md-4 col-sm-4 identity">
+                                    <div class="portfolio-item">
+                                        <a href="portfolio-detail.html" class="portfolio-detail-btn">Detail<i class="arrow_carrot-right_alt2 "></i></a>
+                                        <a href="{% static 'assets/img/work-06%402x.jpg' %}" class="image-popup">
+                                            <div class="link-area">
+                                                <div class="portfolio-caption">
+                                                    <strong>Project</strong>
+                                                    <h4>Forest Dreams</h4>
+                                                </div>
+                                                <img src="{% static 'assets/img/work-06.jpg' %}" alt="">
+                                            </div>
+                                        </a>
+                                    </div><!-- /.portfolio-item -->
+                                </li><!-- /.col-md-4 col-sm-4 -->
+                            </ul><!-- /.portfolio-wrap -->
+                        </div><!-- /.row -->
+                    </div><!-- /.works -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="background background-color-grey-dark"></div>
+</section>
+<!-- end Our Works -->
+
+<!-- Pricing -->
+<section id="nav-pricing" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="has-subtitle font-color-dark">Pricing</h2>
+                            <h3 class="has-opacity font-color-dark">How expensive we are? No need to worry!</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="row">
+                        <div class="price-boxes">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="price-box center" data-scroll-reveal="enter bottom and move 50px">
+                                    <header class="price-box-header">
+                                        <h4>Free</h4>
+                                        <h5>Package</h5>
+                                       <div class="divider background-color-primary"></div>
+                                        <div class="price">$0</div>
+                                        <div class="interval">Forever</div>
+                                    </header><!-- /.price-box-header -->
+                                    <div class="price-box-content">
+                                        <ul class="price-box-list list-unstyled">
+                                            <li><strong>50MB</strong> Bandwidth</li>
+                                            <li><strong>1 E-mail</strong> Account</li>
+                                            <li><strong>2 MySQL</strong> Database</li>
+                                            <li><strong>100MB</strong> Space</li>
+                                            <li><strong>No</strong> Ads</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-framed btn-color-grey-dark">Sign Up!</a>
+                                    </div><!-- /.price-box-content -->
+                                </div><!-- /.price-box -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="price-box center" data-scroll-reveal="enter bottom and move 50px after 0.1s">
+                                    <header class="price-box-header">
+                                        <h4>Silver</h4>
+                                        <h5>Package</h5>
+                                        <div class="divider background-color-primary"></div>
+                                        <div class="price">$10</div>
+                                        <div class="interval">Forever</div>
+                                    </header><!-- /.price-box-header -->
+                                    <div class="price-box-content">
+                                        <ul class="price-box-list list-unstyled">
+                                            <li><strong>100MB</strong> Bandwidth</li>
+                                            <li><strong>5 E-mail</strong> Account</li>
+                                            <li><strong>10 MySQL</strong> Database</li>
+                                            <li><strong>10 GB</strong> Space</li>
+                                            <li><strong>$10</strong> Ads</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-framed btn-color-grey-dark">Sign Up!</a>
+                                    </div><!-- /.price-box-content -->
+                                </div><!-- /.price-box -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="price-box promoted center" data-scroll-reveal="enter bottom and move 50px after 0.2s">
+                                    <header class="price-box-header">
+                                        <h4>Gold</h4>
+                                        <h5>Package</h5>
+                                        <div class="divider background-color-primary"></div>
+                                        <div class="price">$30</div>
+                                        <div class="interval">Forever</div>
+                                    </header><!-- /.price-box-header -->
+                                    <div class="price-box-content">
+                                        <ul class="price-box-list list-unstyled">
+                                            <li><strong>Unlimited</strong> Bandwidth</li>
+                                            <li><strong>10 E-mail</strong> Account</li>
+                                            <li><strong>50 MySQL</strong> Database</li>
+                                            <li><strong>50 GB</strong> Space</li>
+                                            <li><strong>$50</strong> Ads</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-color-primary">Sign Up!</a>
+                                    </div><!-- /.price-box-content -->
+                                </div><!-- /.price-box -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="price-box center" data-scroll-reveal="enter bottom and move 50px after 0.3s">
+                                    <header class="price-box-header">
+                                        <h4>Platinum</h4>
+                                        <h5>Package</h5>
+                                        <div class="divider background-color-primary"></div>
+                                        <div class="price">$50</div>
+                                        <div class="interval">Forever</div>
+                                    </header><!-- /.price-box-header -->
+                                    <div class="price-box-content">
+                                        <ul class="price-box-list list-unstyled">
+                                            <li><strong>Unlimited</strong> Bandwidth</li>
+                                            <li><strong>Unlimited E-mail</strong> Account</li>
+                                            <li><strong>Unlimited MySQL</strong> Database</li>
+                                            <li><strong>Unlimited GB</strong> Space</li>
+                                            <li><strong>$100</strong> Ads</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-framed btn-color-grey-dark">Sign Up!</a>
+                                    </div><!-- /.price-box-content -->
+                                </div><!-- /.price-box -->
+                            </div><!-- /.col-md-3 -->
+                        </div><!-- /.price-boxes -->
+                    </div><!-- /.row -->
+                    <p class="center">All prices has VAT included</p>
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end Pricing -->
+
+<!-- Clients Word -->
+<section id="clients-word" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="font-color-dark has-subtitle">Client’s word</h2>
+                            <h3 class="has-opacity">Hight five for happy client!</h3>
+                        </div><!-- /.section-title -->
+                        <div class="testimonials-carousel">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <figure class="client-picture" data-scroll-reveal="enter top and move 50px"><img src="{% static 'assets/img/client-01.jpg' %}" alt=""></figure>
+                                    <div class="paragraph-wrapper" data-scroll-reveal="enter bottom and move 50px">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Claire Doe</footer>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="testimonial">
+                                <blockquote>
+                                    <figure class="client-picture"><img src="{% static 'assets/img/client-02.jpg' %}" alt=""></figure>
+                                    <div class="paragraph-wrapper">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>John Brown</footer>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div><!-- /.center -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="background background-color-grey-light"></div>
+</section>
+<!-- end Clients Word -->
+
+<!-- The Team -->
+<section id="nav-the-team" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="has-subtitle font-color-light">The Team</h2>
+                            <h3 class="has-opacity font-color-light">Who actually we are?</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="row">
+                        <div class="team">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-01.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-light">Peter Smith</h4>
+                                        <h5 class="has-opacity font-color-light">Lead designer & founder</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.1s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-02.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-light">Nicole stars</h4>
+                                        <h5 class="has-opacity font-color-light">Head of marketing</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.2s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-03.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-light">Sam S.J. Jason</h4>
+                                        <h5 class="has-opacity font-color-light">Developing guru leader</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="team-member" data-scroll-reveal="enter top and move 50px after 0.3s">
+                                    <figure class="team-member-image">
+                                        <div class="team-member-overlay">
+                                            <div class="social-wrapper">
+                                                <div class="social-inner">
+                                                    <div class="social">
+                                                        <h5 class="font-color-light">Follow me</h5>
+                                                        <div class="icons">
+                                                            <a href="#"><i class="icon social_twitter"></i></a>
+                                                            <a href="#"><i class="icon social_facebook"></i></a>
+                                                            <a href="#"><i class="icon social_pinterest"></i></a>
+                                                        </div><!-- /.icons -->
+                                                    </div><!-- /.social -->
+                                                </div><!-- /.social-inner -->
+                                            </div><!-- /.social-wrapper -->
+                                        </div><!-- /.team-member-overlay -->
+                                        <img src="{% static 'assets/img/member-04.jpg' %}" alt="">
+                                    </figure>
+                                    <div class="team-member-title center">
+                                        <h4 class="has-subtitle font-color-light">Jane Brown</h4>
+                                        <h5 class="has-opacity font-color-light">PR manager</h5>
+                                    </div><!-- /.section-title -->
+                                </div><!-- /.team-member -->
+                            </div><!-- /.col-md-3 -->
+                        </div><!-- /.team -->
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="background background-color-grey-dark">
+        <div class="has-parallax opacity-5">
+            <img src="{% static 'assets/img/bg-office.jpg' %}" class="parallax-bg" alt="">
+        </div>
+    </div>
+</section>
+<!-- end The Team -->
+
+<!-- Quote -->
+<section id="quote" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="font-color-light has-subtitle">Simplicity carried to an extreme becomes elegance</h2>
+                            <h3 class="font-color-light has-opacity reset-margin">Jon Franklin</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="background background-color-grey-footer">
+        <div id="bg-quote" class="bg-image opacity-3"></div>
+    </div>
+</section>
+<!-- end Quote -->
+
+<!-- From the blog -->
+<section id="from-the-blog" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content">
+                    <div class="center">
+                        <div class="section-title">
+                            <h2 class="has-subtitle font-color-dark">From the Blog</h2>
+                            <h3 class="has-opacity font-color-dark">Our place for notes, sketches and inspiration</h3>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.center -->
+                    <div class="row">
+                        <div class="blog-posts">
+                            <div class="col-md-6">
+                                <div class="blog-post" data-scroll-reveal="enter right and move 50px">
+                                    <div class="date-circle">
+                                        <div class="date-circle-content">
+                                            <div class="day">01</div>
+                                            <div class="month">jan</div>
+                                        </div>
+                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <a href="blog-detail.html"><h4>Top 10 Trends In Web Design for 2014</h4></a>
+                                        <div class="author">By:  Peter Smith</div>
+                                        <div class="tags">
+                                            <a href="#"><div class="tag">Design</div></a>
+                                            <a href="#"><div class="tag">Trends</div></a>
+                                            <a href="#"><div class="tag">2014</div></a>
+                                        </div>
+                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
+                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
+                                            id vestibulum lorem.
+                                        </p>
+                                        <div class="divider background-color-secondary"></div>
+                                        <div class="read-more">
+                                            <a href="blog-detail.html">Read More</a>
+                                        </div>
+                                    </div><!-- /.blog-post-content -->
+                                </div><!-- /.blog-post -->
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6">
+                                <div class="blog-post" data-scroll-reveal="enter right and move 50px after 0.2s">
+                                    <div class="date-circle">
+                                        <div class="date-circle-content">
+                                            <div class="day">25</div>
+                                            <div class="month">may</div>
+                                        </div>
+                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <a href="blog-detail.html"><h4>Friday Inspiration Round</h4></a>
+                                        <div class="author">By:  Peter Smith</div>
+                                        <div class="tags">
+                                            <a href="#"><div class="tag">Design</div></a>
+                                            <a href="#"><div class="tag">Trends</div></a>
+                                            <a href="#"><div class="tag">2014</div></a>
+                                        </div>
+                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
+                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
+                                            id vestibulum lorem.
+                                        </p>
+                                        <div class="divider background-color-secondary"></div>
+                                        <div class="read-more">
+                                            <a href="blog-detail.html">Read More</a>
+                                        </div>
+                                    </div><!-- /.blog-post-content -->
+                                </div><!-- /.blog-post -->
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.blog-posts -->
+                    </div><!-- /.row -->
+                </div><!-- /.section-content -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!-- end From the blog -->
+{% endblock %}

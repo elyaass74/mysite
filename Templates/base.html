@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Theme Starz">
+
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700'
+            rel='stylesheet' type='text/css'>
+        <link href="{% static 'assets/icons/elegant-font/style.css' %}"
+            rel="stylesheet" type="text/css">
+        <link rel="stylesheet"
+            href="{% static 'assets/bootstrap/css/bootstrap.css' %}"
+            type="text/css">
+        <link rel="stylesheet"
+            href="{% static 'assets/css/vanillabox/vanillabox.css' %}"
+            type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}"
+            type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}"
+            type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}"
+            type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}"
+            type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/css/isotope.css' %}"
+            type="text/css">
+
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"
+            type="text/css">
+
+        <title>Anaglyph - One Page / Multi Page Creative Template</title>
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <div class="navigation-wrapper">
+            <div class="navigation">
+                <header class="navbar" id="top" role="banner">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button"
+                                data-toggle="collapse"
+                                data-target=".bs-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.html" class="navbar-brand nav"><img
+                                    src="{% static 'assets/img/logo.png' %}"
+                                    alt="brand" alt></a>
+                        </div>
+                        <nav
+                            class="collapse navbar-collapse bs-navbar-collapse navbar-right"
+                            role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="blog-listing-two-columns.html">Blog</a>
+                                    <ul class="list-unstyled child-navigation">
+
+                                        <li><a href="blog-detail.html">Blog
+                                                detail</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="portfolio.html">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.navbar collapse-->
+                    </div><!-- /.container -->
+                </header><!-- /.navbar -->
+            </div><!-- /.navigation -->
+        </div>
+        <!-- end Header -->
+
+    {% block content %} 
+    
+    
+
+    {% endblock %}
+
+    <!-- Footer -->
+<footer id="page-footer">
+    <section id="nav-contact-us" class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-content">
+                        <div class="center">
+                            <div class="section-title">
+                                <h2 class="has-subtitle font-color-light">Contact us</h2>
+                                <h3 class="has-opacity font-color-light">Questions or just wanna say hello? We’re waiting!</h3>
+                            </div><!-- /.section-title -->
+                        </div><!-- /.center -->
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="address" data-scroll-reveal="enter left and move 50px">
+                                    <address>
+                                        <dl>
+                                            <dt><i class="icon icon_pin"></i></dt>
+                                            <dd><strong>YOUR COMPANY</strong>
+                                                <p>4815 Kinney Street<br>
+                                                    Springfield, MA 01103</p>
+                                            </dd>
+                                            <dt><i class="icon icon_mobile"></i></dt>
+                                            <dd>413-474-5551</dd>
+                                            <dt><i class="icon icon_mail"></i></dt>
+                                            <dd><a href="#">hello@yourcompany.com</a></dd>
+                                            <dt><i class="icon social_skype"></i></dt>
+                                            <dd>your.company</dd>
+                                        </dl>
+                                    </address>
+                                </div><!-- /.address -->
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <div class="contact-form" data-scroll-reveal="enter right and move 50px">
+                                    <form class="footer-form" id="contactform" method="post" action="#">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <input type="text" name="name" id="name" placeholder="Name" required>
+                                                    </div><!-- /.controls -->
+                                                </div><!-- /.control-group -->
+                                            </div><!-- /.col-md-4 -->
+                                            <div class="col-md-6">
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                                                    </div><!-- /.controls -->
+                                                </div><!-- /.control-group -->
+                                            </div><!-- /.col-md-4 -->
+                                        </div><!-- /.row -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                                    </div><!-- /.controls -->
+                                                </div><!-- /.control-group -->
+                                            </div><!-- /.col-md-4 -->
+                                        </div><!-- /.row -->
+                                        <div class="form-actions pull-right">
+                                            <input type="submit" class="btn btn-color-primary" id="submit" value="Send a Message">
+                                        </div><!-- /.form-actions -->
+                                        <span class="pull-left form-description">Worried about a SPAM? We are first to hate it!</span>
+                                        <div id="form-status"></div>
+                                    </form><!-- /.footer-form -->
+                                </div>
+                            </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.section-content -->
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="background background-color-grey-footer"><img src="{% static 'assets/img/bg-office-02.jpg' %}" class="opacity-3" alt=""></div>
+    </section><!-- /#footer-top -->
+
+    <section id="footer-bottom">
+        <div class="container">
+            <div class="copyright pull-left">© Theme Starz, All rights reserved</div><!-- /.copyright -->
+            <div class="social pull-right">
+                <div class="icons">
+                    <a href="#"><i class="icon social_twitter"></i></a>
+                    <a href="#"><i class="icon social_facebook"></i></a>
+                    <a href="#"><i class="icon social_pinterest"></i></a>
+                </div><!-- /.icons -->
+            </div><!-- /.social -->
+        </div><!-- /.container -->
+        <div class="background background-color-grey-footer"></div>
+    </section><!-- /.footer-bottom -->
+    <section id="interesting-numbers" class="block">
+        <div class="container">
+            <div class="center">
+                <h2 class="reset-margin font-color-dark">hungry for some interesting numbers?</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="counting-numbers">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <div class="counting-number" data-scroll-reveal="enter bottom and move 50px">
+                                    <div class="number" data-from="1" data-to="26">26</div>
+                                    <div class="description font-color-light">projects  done so far</div>
+                                </div><!-- /.counting-number -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-3">
+                                <div class="counting-number" data-scroll-reveal="enter bottom and move 50px after 0.2s">
+                                    <div class="number" data-from="1" data-to="657">657</div>
+                                    <div class="description font-color-light">Cups of coffee drinked</div>
+                                </div><!-- /.counting-number -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-3">
+                                <div class="counting-number" data-scroll-reveal="enter bottom and move 50px after 0.4s">
+                                    <div class="number" data-from="1" data-to="2392">2,392</div>
+                                    <div class="description font-color-light">Photos taken in studio</div>
+                                </div><!-- /.counting-number -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-3 col-sm-3">
+                                <div class="counting-number" data-scroll-reveal="enter bottom and move work after 0.6s">
+                                    <div class="number" data-from="1" data-to="7468">7,468</div>
+                                    <div class="description font-color-light">Smiles given</div>
+                                </div><!-- /.counting-number -->
+                            </div><!-- /.col-md-3 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.counting-numbers -->
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="background">
+            <div class="has-parallax opacity-80">
+                <img src="{% static 'assets/img/bg-grain.jpg' %}" class="parallax-bg" alt="">
+            </div>
+        </div>
+    </section><!-- /#interesting-numbers -->
+</footer>
+<!-- end Footer -->
+
+<script type="text/javascript" src="{% static 'assets/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery-migrate-1.2.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.flexslider-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/html5.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/respond.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.isotope.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.placeholder.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.vanillabox-0.1.5.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/scrollReveal.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/retina-1.1.0.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'assets/js/custom.js' %}"></script>
+
+<script>
+
+
+
+</script>
+
+</body>
+</html>

@@ -6,7 +6,10 @@ def index_view(request):
     return render(request , 'website/index.html')
 
 def about_view(request):
-    return render(request , 'website/about.html')
+    return render(request , 'website/about-us.html')
 
 def contact_view(request):
-    return render(request , 'website/contact.html')
+    return render(request , 'website/contact-us.html')
+
+def Courses_view(request):
+    return render(request , 'website/Courses.html')
