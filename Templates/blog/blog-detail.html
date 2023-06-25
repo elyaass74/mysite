@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% laod static %}
+{% load static %}
 {% block content %}
 <!-- Page Title -->
 <section id="page-title">
@@ -33,29 +33,11 @@
                             <div id="main">
                                 <article class="post">
                                     <header class="post-header">
-                                        <h2>Top 10 Trends In Web Design for 2014</h2>
+                                        <h2>{{title}}</h2>
                                     </header>
                                     <section class="post-featured-image"><img src="{% static 'assets/img/blog-01.jpg' %}" alt=""></section>
                                     <section class="post-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim justo massa,
-                                            et pretium sapien feugiat id. Curabitur ac arcu eu velit fermentum aliquam. Aenean
-                                            vestibulum orci, ac ullamcorper enim. Fusce volutpat, arcu in lobortis ullamcorper,
-                                            nunc tellus ullamcorper erat, nec consequat sem augue nec nunc.</p>
-                                        <p>Suspendisse congue dolor non placerat vestibulum. Mauris semper elementum lacus non gravida.
-                                            Cras viverra diam quis orci euismod aliquet. Nam tincidunt felis odio, eget scelerisque sapien
-                                            congue quis. In in est vel sapien vulputate luctus. Sed eros eros, ultricies porta iaculis tempus,
-                                            vulputate eget turpis. Fusce imperdiet convallis nibh quis congue. Cras suscipit neque nec
-                                            sollicitudin volutpat. Aliquam et metus at neque vulputate varius. Integer egestas sodales varius.
-                                            Nam eget congue nisi, quis semper nunc.</p>
-                                        <p>In hac habitasse platea dictumst. In euismod pulvinar neque, id viverra urna faucibus ac.
-                                            Morbi nisi magna, tempor non euismod a, suscipit eget orci. Nullam pretium, urna ut ultrices blandit,
-                                            odio massa malesuada leo, id ultricies nulla ligula vel odio. Suspendisse gravida vel ipsum vel dictum.
-                                            Proin ac aliquet turpis. Vivamus nec lorem mi. Suspendisse faucibus odio magna, in bibendum leo pharetra ut.
-                                            Nullam malesuada odio elementum augue dapibus pretium. Interdum et malesuada fames ac ante ipsum primis
-                                            in faucibus. Donec sagittis justo odio, a porttitor arcu luctus at. Integer placerat scelerisque felis ac
-                                            pharetra. Nullam at turpis tempus, molestie felis quis, pharetra ipsum. Cras vel lobortis elit.
-                                            Maecenas molestie sed dolor vitae pretium. Praesent sit amet lectus urna.
-                                            Suspendisse rhoncus porttitor accumsan.</p>
+                                        <p><span>{{content}}</span></p>
                                     </section>
                                     <footer class="post-footer">
                                         <div class="social">
@@ -68,11 +50,7 @@
                                             </div><!-- /.icons -->
                                         </div><!-- /.social -->
                                         <div class="tags">
-                                            <span>Tags:</span>
-                                            <a href="#" class="tag">Case Study</a>
-                                            <a href="#" class="tag">Graphic Design</a>
-                                            <a href="#" class="tag">HTML 5</a>
-                                            <a href="#" class="tag">iOS</a>
+                                            <span>{{author}}</span>
                                         </div>
                                     </footer><!-- /.post-footer -->
                                 </article><!-- /.post -->
@@ -263,4 +241,4 @@
 </section>
 <!-- end Blog -->
 
-{% endblock % }
+{% endblock %}
