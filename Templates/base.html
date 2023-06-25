@@ -51,7 +51,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index.html" class="navbar-brand nav"><img
+                            <a href="{% url 'website:index' %}" class="navbar-brand nav"><img
                                     src="{% static 'assets/img/logo.png' %}"
                                     alt="brand" alt></a>
                         </div>
@@ -60,24 +60,23 @@
                             role="navigation">
                             <ul class="nav navbar-nav">
                                 <li class="active">
-                                    <a href="index.html">Home</a>
+                                    <a href="{% url 'website:index' %}">Home</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html">About Us</a>
+                                    <a href="{% url 'website:about' %}">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="blog-listing-two-columns.html">Blog</a>
+                                    <a href="{% url 'blog:index' %}">Blog</a>
                                     <ul class="list-unstyled child-navigation">
 
-                                        <li><a href="blog-detail.html">Blog
-                                                detail</a></li>
+                                        <li><a href="{% url 'blog:single' %}">Blog detail</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="portfolio.html">Portfolio</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.html">Contact Us</a>
+                                    <a href="{% url 'website:contact' %}">Contact Us</a>
                                 </li>
                             </ul>
                         </nav><!-- /.navbar collapse-->

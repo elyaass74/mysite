@@ -11,5 +11,4 @@ def about_view(request):
 def contact_view(request):
     return render(request , 'website/contact-us.html')
 
-def Courses_view(request):
-    return render(request , 'website/Courses.html')
+
