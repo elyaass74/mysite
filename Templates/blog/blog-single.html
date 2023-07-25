@@ -5,7 +5,7 @@
 <!-- Page Title -->
 <section id="page-title">
     <div class="title">
-        <h1 class="reset-margin">Blog Listing</h1>
+        <h1 class="reset-margin">Posts Listing</h1>
     </div>
     <img src="{% static 'assets/img/title-background.jpg' %}" class="parallax-bg" alt="">
 </section>
@@ -31,187 +31,45 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="blog-posts">
+                            {% for post in posts %}
                             <div class="col-md-6">
+
+
+                               
                                 <div class="blog-post" data-scroll-reveal="enter right and move 50px">
                                     <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">01</div>
-                                            <div class="month">jan</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
+                                    
+                                            
+                                       
+                                        
+                                        <img src="{{post.image.url}}" alt="" style="margin: 50px; max-height: fit-content;">
                                     </div>
                                     <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>Top 10 Trends In Web Design for 2014</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Design</div></a>
-                                            <a href="#"><div class="tag">Trends</div></a>
-                                            <a href="#"><div class="tag">2014</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
+                                        <a href="{% url 'blog:index' pid=post.id %}"><h4>{{post.title}}</h4></a>
+                                        <div class="author">By:  {{post.author.get_full_name}}</div>
+                                        
+                                        <p>{{post.content|truncatechars:100}}
                                         </p>
-                                        <div class="divider background-color-secondary"></div>
+                                        <div class="date" style="color: brown; margin-top: 10px; margin-bottom: 0px;">published : {{post.published_date|date:"d M Y"}}</div>
+                                        <p class="divider background-color-secondary"><a href="#"></a>{{post.counted_view}} Views<span> in Total</span></p>
                                         <div class="read-more">
                                             <a href="{% url 'blog:single' %}">Read More</a>
                                         </div>
                                     </div><!-- /.blog-post-content -->
                                 </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-post" data-scroll-reveal="enter right and move 50px after 0.2s">
-                                    <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">12</div>
-                                            <div class="month">feb</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>Friday Inspiration Round</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Friday</div></a>
-                                            <a href="#"><div class="tag">Trends</div></a>
-                                            <a href="#"><div class="tag">Inspiration</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
-                                        </p>
-                                        <div class="divider background-color-secondary"></div>
-                                        <div class="read-more">
-                                            <a href="{% url 'blog:single' %}">Read More</a>
-                                        </div>
-                                    </div><!-- /.blog-post-content -->
-                                </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                        </div><!-- /.blog-posts -->
+                            
+                                
+                            </div><!-- /.blog-posts -->
+                            {% endfor %}
+                        </div><!-- /.row -->
+                  
+                           
+                        
                     </div><!-- /.row -->
-                    <div class="row">
-                        <div class="blog-posts">
-                            <div class="col-md-6">
-                                <div class="blog-post" data-scroll-reveal="enter right and move 50px">
-                                    <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">23</div>
-                                            <div class="month">mar</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>Good and Great Typography</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Typography</div></a>
-                                            <a href="#"><div class="tag">Thoughts</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
-                                        </p>
-                                        <div class="divider background-color-secondary"></div>
-                                        <div class="read-more">
-                                            <a href="{% url 'blog:single' %}">Read More</a>
-                                        </div>
-                                    </div><!-- /.blog-post-content -->
-                                </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-post" data-scroll-reveal="enter right and move 50px after 0.2s">
-                                    <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">06</div>
-                                            <div class="month">apr</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>What's Next After Flat Design?</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Design</div></a>
-                                            <a href="#"><div class="tag">Flat</div></a>
-                                            <a href="#"><div class="tag">Trending</div></a>
-                                            <a href="#"><div class="tag">Future</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
-                                        </p>
-                                        <div class="divider background-color-secondary"></div>
-                                        <div class="read-more">
-                                            <a href="{% url 'blog:single' %}">Read More</a>
-                                        </div>
-                                    </div><!-- /.blog-post-content -->
-                                </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                        </div><!-- /.blog-posts -->
-                    </div><!-- /.row -->
-                    <div class="row">
-                        <div class="blog-posts">
-                            <div class="col-md-6">
-                                <div class="blog-post" data-scroll-reveal="enter right and move 50px">
-                                    <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">17</div>
-                                            <div class="month">may</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>10 Awesome Photoshop Actions Package</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Typography</div></a>
-                                            <a href="#"><div class="tag">Thoughts</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
-                                        </p>
-                                        <div class="divider background-color-secondary"></div>
-                                        <div class="read-more">
-                                            <a href="{% url 'blog:single' %}">Read More</a>
-                                        </div>
-                                    </div><!-- /.blog-post-content -->
-                                </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-post" data-scroll-reveal="enter right and move 50px after 0.2s">
-                                    <div class="date-circle">
-                                        <div class="date-circle-content">
-                                            <div class="day">15</div>
-                                            <div class="month">jun</div>
-                                        </div>
-                                        <img src="{% static 'assets/img/date-circle.png' %}" alt="">
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <a href="{% url 'blog:single' %}"><h4>What's more Important? Copy or Design</h4></a>
-                                        <div class="author">By:  Peter Smith</div>
-                                        <div class="tags">
-                                            <a href="#"><div class="tag">Design</div></a>
-                                            <a href="#"><div class="tag">Flat</div></a>
-                                            <a href="#"><div class="tag">Trending</div></a>
-                                            <a href="#"><div class="tag">Future</div></a>
-                                        </div>
-                                        <p>Ut eu consequat mi. In quis aliquam dolor. Nam molestie, tellus sit amet volutpat accumsan,
-                                            diam ligula laoreet nisi, ac cursus odio sem sed turpis. Maecenas porttitor sagittis ipsum,
-                                            id vestibulum lorem.
-                                        </p>
-                                        <div class="divider background-color-secondary"></div>
-                                        <div class="read-more">
-                                            <a href="{% url 'blog:single' %}">Read More</a>
-                                        </div>
-                                    </div><!-- /.blog-post-content -->
-                                </div><!-- /.blog-post -->
-                            </div><!-- /.col-md-6 -->
-                        </div><!-- /.blog-posts -->
-                    </div><!-- /.row -->
-                </div><!-- /.section-content -->
-            </div><!-- /.col-md-12 -->
-        </div><!-- /.row -->
+                </div><!-- /.blog-posts -->   
+                           
+            </div><!-- /.row -->
+        </div>
         <div class="center">
             <ul class="pagination">
                 <li class="active"><a href="#">1</a></li>

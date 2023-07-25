@@ -6,8 +6,9 @@ app_name = 'blog'
 urlpatterns = [
    
     #path('url','view','name')
-    path('',blog_detail , name='index'),
+    path('<int:pid>',blog_detail , name='index'),
     path('single',blog_single,name='single'),
+    #path('post-<int:pid>',test_view,name='test')
  
     
     

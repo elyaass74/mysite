@@ -4,22 +4,14 @@
 <!-- Page Title -->
 <section id="page-title">
     <div class="title">
-        <h1 class="reset-margin">Blog Detail</h1>
+        <img src="{% static 'assets/img/title-background.jpg' %}" class="parallax-bg" alt=""> <h1 class="reset-margin">{{post.title}}</h1>
     </div>
-    <img src="{% static 'assets/img/title-background.jpg' %}" class="parallax-bg" alt="">
+    
 </section>
 <!-- end Page Title -->
 
 <!-- Breadcrumb -->
-<section id="breadcrumb">
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li class="active">Blog Detal</li>
-        </ol>
-    </div>
-</section>
+
 <!-- end Breadcrumb -->
 
 <!-- Blog -->
@@ -33,13 +25,19 @@
                             <div id="main">
                                 <article class="post">
                                     <header class="post-header">
-                                        <h2>{{title}}</h2>
+                                        <h2>{{post.title}}</h2>
                                     </header>
-                                    <section class="post-featured-image"><img src="{% static 'assets/img/blog-01.jpg' %}" alt=""></section>
+                                    <section class="post-featured-image"><img src="{{post.image.url}}" alt="" style="margin: 70px;"></section>
                                     <section class="post-content">
-                                        <p><span>{{content}}</span></p>
+                                        <div class="date-circle">
+                                            <div class="date-circle-content">
+                                                
+                                                <div class="date">published : {{post.published_date|date:"d M Y"}}</div>
+                                            </div>
+                                        <p style="font-size: 32px; "><span>{{post.content}}</span></p>
                                     </section>
                                     <footer class="post-footer">
+                                        <p class="divider background-color-secondary"><a href="#"></a>{{post.counted_view}} Views<span> in Total</span></p>    
                                         <div class="social">
                                             <div class="icons">
                                                 <span>Share this post:</span>
@@ -50,7 +48,7 @@
                                             </div><!-- /.icons -->
                                         </div><!-- /.social -->
                                         <div class="tags">
-                                            <span>{{author}}</span>
+                                            <span>by:{{post.author.get_full_name}}</span>
                                         </div>
                                     </footer><!-- /.post-footer -->
                                 </article><!-- /.post -->
@@ -188,17 +186,14 @@
                                 <aside class="categories">
                                     <h3>Categories</h3>
                                     <ul class="list-unstyled">
-                                        <li><a href="#">Behind the Scenes</a></li>
-                                        <li><a href="#">Case Study</a></li>
-                                        <li><a href="#">Graphic Design</a></li>
-                                        <li><a href="#">Photoshop</a></li>
-                                        <li><a href="#">Review</a></li>
-                                        <li><a href="#">Sound Check</a></li>
-                                        <li><a href="#">Tips From Developer</a></li>
+                                        {% for cat in post.category.all %}
+                                            <a>{{ cat.name }}</a> {% if not forloop.last %},{% endif %}
+                                        {% endfor %}
+                        
                                     </ul>
                                 </aside><!-- /.categories -->
                                 <aside class="search">
-                                    <h3>Search.</h3>
+                                    <h3>Search</h3>
                                     <div class="control-group">
                                         <div class="controls">
                                             <input type="search" name="search" placeholder="Search">
